@@ -10,8 +10,7 @@ const handlebars = require('express-handlebars');
 const mongoose = require('mongoose');
 const passport = require('passport');
 
-
-require("dotenv").load();
+// require("dotenv").load();
 
 var models = require("./models");
 
@@ -31,7 +30,7 @@ var strategy = {
 
 // Database Connection
 var db = mongoose.connection;
-mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://127.0.0.1/cogs121');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1/cogs121');
 db.on('error', console.error.bind(console, 'Mongo DB Connection Error:'));
 db.once('open', function(callback) {
     console.log("Database connected successfully.");
