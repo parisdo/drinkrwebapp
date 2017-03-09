@@ -127,24 +127,6 @@ io.on('connection', function(socket){
   });
 });
 
-//socket.on()
-
-/*
-io.on('connection', function(socket){
-  socket.on('newsfeed', function(msg){
-    console.log('message: ' + msg);
-  });
-});
-
-io.on('connection', function(socket){
-  socket.on('newsfeed', function(msg){
-    io.emit('newsfeed', msg);
-  });
-});
-*/
-
-/* TODO: Server-side Socket.io here */
-
 // Start Server
 http.listen(app.get("port"), function() {
     console.log("Express server listening on port " + app.get("port"));
